@@ -1,0 +1,135 @@
+.button {
+  transition: box-shadow 0.5s linear;
+}
+.button:hover {
+  box-shadow: 0px 5px 40px 2px rgb(255, 62, 121);
+}
+
+.content__button:hover {
+  font-weight: bold;
+}
+
+.price__item-box__btn {
+  transition: all 0.5s linear;
+}
+.price__item-box__btn:hover {
+  background-color: white;
+  color: rgb(255, 62, 121);
+  border: 1px solid rgb(255, 62, 121);
+}
+.price__item-box__btn:hover::after {
+  content: url("../../img/svg/dropdown.svg");
+  top: 9px;
+}
+
+.sidebar {
+  transition: left 1s, filter 1s linear;
+}
+
+.header, .main, .footer {
+  transition: filter 1s linear;
+}
+
+.show__sidebar {
+  left: 0;
+}
+
+.blur, .blur__side {
+  filter: blur(5px);
+}
+
+.text__show {
+  display: block;
+}
+
+.dots__brands {
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+}
+.dots__brands span {
+  display: block;
+  width: 12px;
+  height: 12px;
+  background-color: rgb(221, 221, 221);
+  border-radius: 50%;
+}
+
+.dots__repair {
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+}
+.dots__repair span {
+  display: block;
+  width: 12px;
+  height: 12px;
+  background-color: rgb(221, 221, 221);
+  border-radius: 50%;
+}
+
+.dots__price {
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+  margin-bottom: 16px;
+}
+.dots__price span {
+  display: block;
+  width: 12px;
+  height: 12px;
+  background-color: rgb(221, 221, 221);
+  border-radius: 50%;
+}
+
+.repair__brands-items, .repair__appliances-items {
+  transition: height 0.5s linear;
+}
+
+.show__brands {
+  height: 340px;
+}
+
+.show__repair {
+  height: 350px;
+}
+
+.feedback {
+  transition: top 1s linear;
+}
+
+.show__feedback {
+  top: 0;
+}
+
+.show__feedback-side {
+  top: 0;
+}
+
+.call {
+  transition: top 1s, transform 1s linear;
+}
+
+.show__call {
+  top: 0;
+  transform: rotate(360deg);
+}
+
+.show__call-side {
+  top: 0;
+  transform: rotate(360deg);
+}
+
+@media screen and (min-width: 768px) {
+  .dots__brands, .dots__price, .dots__repair {
+    display: none;
+  }
+}
+@media screen and (min-width: 1366px) {
+  .show__repair {
+    height: 160px;
+  }
+  .show__brands {
+    height: 250px;
+  }
+}/*# sourceMappingURL=animate.css.map */

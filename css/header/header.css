@@ -1,0 +1,327 @@
+@charset "UTF-8";
+.button {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  border: none;
+  background-color: rgb(255, 62, 121);
+  padding: 10px;
+}
+
+.tablet {
+  display: none;
+}
+
+.mobile {
+  display: block;
+}
+
+.header {
+  position: relative;
+  padding-top: 24px;
+  padding-bottom: 24px;
+}
+.header__items {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.header__item:nth-child(2) {
+  position: relative;
+}
+.header__item:nth-child(2)::after {
+  content: "";
+  position: absolute;
+  width: 2px;
+  height: 32px;
+  background-color: rgb(234, 234, 234);
+  top: 10px;
+  right: -10px;
+}
+
+.sidebar {
+  position: absolute;
+  height: 200vh;
+  top: 0;
+  left: -500px;
+  width: 320px;
+  background-color: rgb(255, 255, 255);
+  z-index: 1;
+}
+
+.sidebar__header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding-top: 16px;
+  padding-bottom: 24px;
+}
+.sidebar__header-href {
+  flex: 1;
+  margin-left: 16px;
+}
+
+.sidebar__menu {
+  margin-bottom: 32px;
+}
+
+.sidebar__items {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+}
+
+.sidebar__href {
+  position: relative;
+}
+.sidebar__href:focus {
+  color: rgb(126, 126, 130);
+}
+.sidebar__href:focus::before {
+  content: "";
+  position: absolute;
+  top: -5px;
+  left: -16px;
+  width: 4px;
+  height: 32px;
+  background-color: rgb(65, 246, 215);
+  border-top-right-radius: 10px;
+  border-bottom-right-radius: 10px;
+}
+
+.sidebar__btns {
+  display: flex;
+  gap: 16px;
+  align-items: center;
+  margin-bottom: 16px;
+}
+
+.sidebar__contacts {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  margin-bottom: 10px;
+}
+.sidebar__contacts_phone {
+  font-weight: bold;
+}
+
+.sidebar__lang {
+  display: flex;
+  gap: 8px;
+}
+.sidebar__lang-btn {
+  background-color: transparent;
+  text-transform: uppercase;
+  border: none;
+  font-weight: bold;
+}
+.sidebar__lang-btn:hover {
+  opacity: 0.6;
+}
+
+.feedback {
+  position: absolute;
+  top: -1000px;
+  right: 0;
+  width: 320px;
+  background-color: white;
+  height: 100vh;
+  padding: 19px 16px 75px 16px;
+  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2);
+  z-index: 10;
+}
+.feedback__close {
+  margin-bottom: 30px;
+}
+.feedback__title {
+  position: relative;
+  font-size: 24px;
+  margin-bottom: 24px;
+}
+.feedback__title::before {
+  content: "";
+  display: block;
+  position: absolute;
+  width: 3px;
+  height: 40px;
+  background-color: rgb(65, 246, 215);
+  top: -5px;
+  left: -16px;
+  border-top-right-radius: 6px;
+  border-bottom-right-radius: 6px;
+}
+.feedback__form {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+input, textarea {
+  height: 48px;
+  padding: 16px;
+  border-radius: 6px;
+  border: 1px solid rgb(234, 234, 234);
+}
+
+textarea {
+  height: 118px;
+  margin-bottom: 16px;
+}
+
+.text_pink {
+  color: rgb(255, 62, 121);
+}
+
+.form__button {
+  width: 136px;
+  height: 32px;
+  align-self: flex-end;
+  border-radius: 16px;
+  border: none;
+  background-color: rgb(255, 62, 121);
+  text-transform: uppercase;
+  font-size: 12px;
+  color: white;
+  position: relative;
+  padding-right: 36px;
+  padding-top: 6px;
+  padding-bottom: 4px;
+}
+.form__button::after {
+  content: url("../../img/svg/dropdownwhite.svg");
+  position: absolute;
+  top: 11px;
+  right: 18px;
+}
+
+.call {
+  width: 320px;
+  height: 100vh;
+  position: absolute;
+  top: -1000px;
+  right: 0;
+  padding: 24px 16px 0 16px;
+  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2);
+  z-index: 10;
+  background-color: white;
+}
+.call__close {
+  margin-bottom: 40px;
+}
+.call__title {
+  position: relative;
+  font-size: 24px;
+  margin-bottom: 24px;
+}
+.call__title::before {
+  content: "";
+  display: block;
+  position: absolute;
+  width: 3px;
+  height: 40px;
+  background-color: rgb(65, 246, 215);
+  top: -5px;
+  left: -16px;
+  border-top-right-radius: 6px;
+  border-bottom-right-radius: 6px;
+}
+.call__form {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.feedback__form-phone {
+  width: 100%;
+  margin-bottom: 16px;
+}
+
+.call__form-info {
+  margin-bottom: 16px;
+}
+
+.call__form-button {
+  align-self: flex-end;
+}
+
+@media screen and (min-width: 768px) {
+  .sidebar__menu {
+    margin-bottom: 268px;
+  }
+  .tablet {
+    display: block;
+  }
+  .header__item:nth-child(2) {
+    margin-right: 250px;
+  }
+  .header__item:nth-child(2)::after {
+    display: none;
+  }
+  .header__item:nth-child(2)::before {
+    content: "";
+    position: absolute;
+    width: 2px;
+    height: 32px;
+    background-color: rgb(234, 234, 234);
+    top: 10px;
+    left: -10px;
+  }
+  .header__item:nth-child(5) {
+    position: relative;
+  }
+  .header__item:nth-child(5)::after {
+    content: "";
+    position: absolute;
+    width: 2px;
+    height: 32px;
+    background-color: rgb(234, 234, 234);
+    top: 5px;
+    right: -12px;
+  }
+}
+@media screen and (min-width: 1366px) {
+  body {
+    margin-left: 320px;
+  }
+  .mobile, .tablet, .img__mobile, .img__tablet {
+    display: none;
+  }
+  .header {
+    display: flex;
+    background-color: rgb(248, 248, 248);
+  }
+  .sidebar {
+    background-color: white;
+    height: 100%;
+    top: 0;
+    left: 0;
+  }
+  .sidebar .container {
+    width: 272px;
+  }
+  .sidebar__href {
+    font-weight: bold;
+  }
+  .sidebar__href:focus::before {
+    left: -25px;
+  }
+  .header__items {
+    justify-content: flex-end;
+    gap: 160px;
+  }
+  .header__item {
+    position: relative;
+  }
+  .header__item::before {
+    content: "Оставить заявку";
+    position: absolute;
+    top: 11px;
+    left: -140px;
+    white-space: nowrap;
+  }
+  .header__item:last-child::before {
+    content: "Статус ремонта";
+  }
+}/*# sourceMappingURL=header.css.map */
